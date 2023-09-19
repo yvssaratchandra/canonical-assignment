@@ -1,13 +1,14 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
-import Card from "./components/card";
-import { transformCardInfo } from "./utils";
+import Card from "../card";
+import { transformCardInfo } from "../../utils";
+import "./App.scss";
 
 const App = () => {
   const [cards, setCards] = useState([]);
 
   useEffect(() => {
-    console.log("effect");
+    console.log("Inside useEffect");
     axios
       .get(
         "https://people.canonical.com/~anthonydillon/wp-json/wp/v2/posts.json"
@@ -20,10 +21,10 @@ const App = () => {
 
   return (
     <div className="p-strip">
-      <div className="row u-clearfix">
+      <div className="row">
         {cards.map((card) => {
           return (
-            <div className="col-4 u-equal-height col-medium-2" key={card.id}>
+            <div className="col-4 u-equal-height" key={card.id}>
               <Card
                 link={card.link}
                 title={card.title}

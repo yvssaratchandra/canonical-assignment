@@ -2,7 +2,7 @@ import { singular } from "pluralize";
 
 const getTopic = (term) => {
   const topicObj = term.flat(2).find((x) => x.taxonomy === "topic");
-  return topicObj ? topicObj.name : "Miscellaneous";
+  return topicObj || { name: "Miscellaneous", slug: "miscellaneous" };
 };
 const getCategory = (term) => {
   const categoryObj = term.flat(2).find((x) => x.taxonomy === "category");
@@ -13,9 +13,10 @@ const getAuthor = (authorId, authorsInEmbedded) => {
   const authorDetails = authorsInEmbedded.find(
     (author) => author.id === authorId
   );
-  return authorDetails
-    ? { name: authorDetails.name, link: authorDetails.link }
-    : { name: "Anonymous", link: "#" };
+  return {
+    name: authorDetails?.name || "Anonymous",
+    link: authorDetails?.link || "#",
+  };
 };
 
 const getDate = (date) => {

@@ -1,11 +1,26 @@
+import cn from "classnames";
 import "./Card.scss";
 
-const Card = ({ link, title, topic, imageInfo, date, author, category }) => {
+const Card = ({
+  link,
+  title,
+  topic: { name: topicName, slug: topicSlug },
+  imageInfo,
+  date,
+  author,
+  category,
+}) => {
+  const headerClasses = {
+    "highlight-header--people-and-culture": topicSlug === "people-and-culture",
+    "highlight-header--canonical-announcements":
+      topicSlug === "canonical-announcements",
+    "highlight-header--miscellaneous": topicSlug === "miscellaneous",
+  };
   return (
-    <div className="p-card--highlighted">
-      <header className="highlight-margin">
+    <div className="p-card--highlighted card-container">
+      <header className={cn(headerClasses)}>
         <h5 className="p-heading heading u-no-margin-bottom">
-          {topic.toUpperCase()}
+          {topicName.toUpperCase()}
         </h5>
       </header>
       <div className="p-card__content body">

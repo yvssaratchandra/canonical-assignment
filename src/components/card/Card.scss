@@ -1,19 +1,36 @@
-@import "vanilla-framework";
-@include vanilla;
-
-.p-card--highlighted {
-  display: flex;
-  flex-direction: column;
-  padding: 0;
-  margin-bottom: 1.5rem;
-  overflow: auto;
-  border-radius: 0.125rem;
+@mixin horizontal-rule {
+  border-top: 1px dotted grey;
+  margin: 0 0.5rem;
+  padding: 1rem 0.5rem;
 }
 
-.highlight-margin {
-  border-top: 3px solid #ad79b5;
+.p-card--highlighted {
+  &.card-container {
+    display: flex;
+    flex-direction: column;
+    border-radius: 0.125rem;
+    margin-bottom: 1.5rem;
+    overflow: auto;
+    padding: 0;
+  }
+}
+
+%highlight-header {
+  border-top: 3px solid;
   border-radius: 2px;
   padding: 1rem 1rem 0.5rem;
+}
+.highlight-header--people-and-culture {
+  @extend %highlight-header;
+  border-color: #666;
+}
+.highlight-header--canonical-announcements {
+  @extend %highlight-header;
+  border-color: #ff8936;
+}
+.highlight-header--miscellaneous {
+  @extend %highlight-header;
+  border-color: red;
 }
 
 .heading {
@@ -22,16 +39,12 @@
 }
 
 .body {
-  border-top: 1px dotted grey;
-  margin: 0 0.5rem;
-  padding: 1rem 0.5rem;
+  @include horizontal-rule();
   height: 100%;
 }
 
 .footer {
-  border-top: 1px dotted grey;
-  margin: 0 0.5rem;
-  padding: 1rem 0.5rem;
+  @include horizontal-rule();
   font-size: 0.875rem;
   max-width: 100%;
 }
