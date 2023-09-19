@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/canonical-assignment/static/css/main.b0ef0d92.css",
-    "main.js": "/canonical-assignment/static/js/main.6be19cb6.js",
+    "main.css": "/canonical-assignment/static/css/main.e68cdce2.css",
+    "main.js": "/canonical-assignment/static/js/main.87cbb332.js",
     "index.html": "/canonical-assignment/index.html",
-    "main.b0ef0d92.css.map": "/canonical-assignment/static/css/main.b0ef0d92.css.map",
-    "main.6be19cb6.js.map": "/canonical-assignment/static/js/main.6be19cb6.js.map"
+    "main.e68cdce2.css.map": "/canonical-assignment/static/css/main.e68cdce2.css.map",
+    "main.87cbb332.js.map": "/canonical-assignment/static/js/main.87cbb332.js.map"
   },
   "entrypoints": [
-    "static/css/main.b0ef0d92.css",
-    "static/js/main.6be19cb6.js"
+    "static/css/main.e68cdce2.css",
+    "static/js/main.87cbb332.js"
   ]
 }
