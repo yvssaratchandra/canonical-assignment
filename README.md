@@ -18,5 +18,7 @@
 
 ## Running Local Server
 
-In the root of the repository, run
-`npm start`
+- node version used: v20.5.1
+- npm version used: v9.8.0
+- run `npm ci` to install dependencies
+- To start server, in the root of the repository, run `npm start`
