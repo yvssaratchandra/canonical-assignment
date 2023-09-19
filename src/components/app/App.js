@@ -24,7 +24,7 @@ const App = () => {
       <div className="row">
         {cards.map((card) => {
           return (
-            <div className="col-4 u-equal-height" key={card.id}>
+            <div className="col-4 col-medium-2 u-equal-height" key={card.id}>
               <Card
                 link={card.link}
                 title={card.title}
