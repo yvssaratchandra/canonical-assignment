@@ -8,7 +8,6 @@ const App = () => {
   const [cards, setCards] = useState([]);
 
   useEffect(() => {
-    console.log("Inside useEffect");
     axios
       .get(
         "https://people.canonical.com/~anthonydillon/wp-json/wp/v2/posts.json"
