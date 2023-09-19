@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/yvssaratchandra/canonical-assignment/static/css/main.b0ef0d92.css",
+    "main.js": "/yvssaratchandra/canonical-assignment/static/js/main.87cbb332.js",
+    "index.html": "/yvssaratchandra/canonical-assignment/index.html",
+    "main.b0ef0d92.css.map": "/yvssaratchandra/canonical-assignment/static/css/main.b0ef0d92.css.map",
+    "main.87cbb332.js.map": "/yvssaratchandra/canonical-assignment/static/js/main.87cbb332.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.b0ef0d92.css",
+    "static/js/main.87cbb332.js"
+  ]
+}
