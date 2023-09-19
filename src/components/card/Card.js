@@ -11,6 +11,8 @@ const Card = ({
   category,
 }) => {
   // color of the header vary based on the topic
+  // {[`highlight-header--${topicSlug}`]: true} can also be used here, but it's
+  // easier to search for the class directly in the current implementation
   const headerClasses = {
     "highlight-header--people-and-culture": topicSlug === "people-and-culture",
     "highlight-header--canonical-announcements":
