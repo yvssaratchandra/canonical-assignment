@@ -10,12 +10,14 @@ const Card = ({
   author,
   category,
 }) => {
+  // color of the header vary based on the topic
   const headerClasses = {
     "highlight-header--people-and-culture": topicSlug === "people-and-culture",
     "highlight-header--canonical-announcements":
       topicSlug === "canonical-announcements",
     "highlight-header--miscellaneous": topicSlug === "miscellaneous",
   };
+
   return (
     <div className="p-card--highlighted card-container">
       <header className={cn(headerClasses)}>

@@ -1,15 +1,21 @@
 import { singular } from "pluralize";
 
 const getTopic = (term) => {
+  // Flattening the array here and finding because I was unsure if topics are
+  // always in 2nd index of wp:term array
   const topicObj = term.flat(2).find((x) => x.taxonomy === "topic");
   return topicObj || { name: "Miscellaneous", slug: "miscellaneous" };
 };
 const getCategory = (term) => {
+  // Flattening the array here and finding because I was unsure if categories
+  // are always in 0th index of wp:term array
   const categoryObj = term.flat(2).find((x) => x.taxonomy === "category");
-  return categoryObj ? singular(categoryObj.name) : "No category";
+  return categoryObj ? singular(categoryObj.name) : "Uncategorized";
 };
 
 const getAuthor = (authorId, authorsInEmbedded) => {
+  // Finding the author name using authorId because I was unsure if the author
+  // array in _embedded always contains a single entry
   const authorDetails = authorsInEmbedded.find(
     (author) => author.id === authorId
   );

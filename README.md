@@ -1,8 +1,16 @@
 # Canonical Take Home Test
 
-Used [React](https://react.dev/reference/react) Library to write this assignment
-Used [Axios](https://github.com/axios/axios) package to handle the HTTP request
-Used [Vanilla CSS Framework](https://vanillaframework.io) for implementing the provided design
+## Dependencies
+
+1. [React](https://react.dev/reference/react): Library to write this assignment
+
+2. [Axios](https://github.com/axios/axios): package to handle the HTTP request
+
+3. [Vanilla CSS Framework](https://vanillaframework.io): for implementing the provided design
+
+4. [Sass](https://www.npmjs.com/package/sass): stylesheet language that's compiled to CSS
+
+5. [classnames](https://www.npmjs.com/package/classnames): A simple JavaScript utility for conditionally joining classNames together.
 
 ## Github Pages Deployment
 
