@@ -1,16 +1,9 @@
-const Card = ({
-  id,
-  link,
-  title,
-  topic,
-  imageInfo,
-  date,
-  author,
-  category,
-}) => {
+import "./Card.scss";
+
+const Card = ({ link, title, topic, imageInfo, date, author, category }) => {
   return (
-    <div className="p-card--highlighted highlight-margin ">
-      <header>
+    <div className="p-card--highlighted">
+      <header className="highlight-margin">
         <h5 className="p-heading heading u-no-margin-bottom">
           {topic.toUpperCase()}
         </h5>

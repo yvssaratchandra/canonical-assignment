@@ -1,6 +1,5 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
-import "./App.scss";
 import Card from "./components/card";
 import { transformCardInfo } from "./utils";
 
@@ -14,7 +13,6 @@ const App = () => {
         "https://people.canonical.com/~anthonydillon/wp-json/wp/v2/posts.json"
       )
       .then((response) => {
-        console.log("promise fulfilled", { response });
         const output = response.data.map(transformCardInfo);
         setCards(output);
       });
@@ -27,7 +25,6 @@ const App = () => {
           return (
             <div className="col-4 u-equal-height col-medium-2" key={card.id}>
               <Card
-                id={card.id}
                 link={card.link}
                 title={card.title}
                 topic={card.topic}
